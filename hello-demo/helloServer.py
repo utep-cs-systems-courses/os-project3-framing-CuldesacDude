@@ -13,7 +13,7 @@ switchesVarDefaults = (
 
 
 
-progname = "echoserver"
+progname = "helloServer"
 paramMap = params.parseParams(switchesVarDefaults)
 
 listenPort = paramMap['listenPort']
@@ -35,5 +35,5 @@ while True:
         time.sleep(0.25);       # delay 1/4s
         conn.send(b"world")
         conn.shutdown(socket.SHUT_WR)
-
+        os.exit(0);
 
